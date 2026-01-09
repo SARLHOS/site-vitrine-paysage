@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://SARLHOS.github.io/site-vitrine-paysage/index.html</loc>
+    <lastmod>2026-01-09T16:56:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://SARLHOS.github.io/site-vitrine-paysage/services.html</loc>
+    <lastmod>2026-01-09T16:56:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://SARLHOS.github.io/site-vitrine-paysage/portfolio.html</loc>
+    <lastmod>2026-01-09T16:56:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://SARLHOS.github.io/site-vitrine-paysage/about.html</loc>
+    <lastmod>2026-01-09T16:56:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://SARLHOS.github.io/site-vitrine-paysage/contact.html</loc>
+    <lastmod>2026-01-09T16:56:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
