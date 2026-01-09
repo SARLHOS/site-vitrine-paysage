@@ -1,56 +1,48 @@
-/* Style principal - Site vitrine Paysage */
-:root{
-  --vert-fonce:#2f5d3a; /* vert sapin */
-  --vert:#4caf50;
-  --beige:#f4f1ea;
-  --brun:#7b5e57;
-  --noir:#1a1a1a;
-}
+
+/* Site pro Terrassement & Paysage - performant, accessible, responsive */
+:root{--vert:#2f5d3a;--accent:#4caf50;--clair:#f5f3ee;--noir:#1a1a1a}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--noir);background:var(--beige)}
-a{color:var(--vert-fonce);text-decoration:none}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;color:var(--noir);background:var(--clair)}
 .container{width:min(1100px,90%);margin-inline:auto}
-.header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e5e5;z-index:1000}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 0}
-.nav a.logo{display:flex;align-items:center;gap:.6rem;font-weight:700}
-.nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
-.nav a{padding:.5rem .7rem;border-radius:.4rem}
-.nav a:hover{background:#f5f5f5}
-
-.hero{background:linear-gradient(180deg, rgba(46,93,58,.85), rgba(46,93,58,.65)), url('../img/hero.jpg') center/cover no-repeat; color:#fff;}
-.hero .container{padding:6rem 0}
-.hero h1{font-size:clamp(1.8rem, 4vw, 3rem);line-height:1.1;margin:0 0 .5rem}
+/* Header */
+.header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e7e7e7;z-index:1000}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.5rem;font-weight:700}
+.nav ul{list-style:none;display:flex;gap:.8rem;margin:0;padding:0}
+.nav a{padding:.45rem .65rem;border-radius:.4rem}
+.nav a:hover{background:#f6f6f6}
+/* Hero */
+.hero{color:#fff;background:linear-gradient(180deg, rgba(47,93,58,.92), rgba(47,93,58,.65)), url('../img/hero.jpg') center/cover no-repeat}
+.hero .container{padding:5rem 0 4rem}
+.hero h1{margin:0 0 .4rem;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1}
 .hero p{max-width:60ch;opacity:.95}
-.hero .cta{margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap}
-.btn{display:inline-block;padding:.7rem 1rem;border-radius:.5rem;font-weight:600}
-.btn.primary{background:var(--vert);color:#fff}
-.btn.secondary{background:#fff;color:var(--vert-fonce);border:1px solid #eee}
-
+.cta{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:.5rem;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.secondary{background:#fff;color:var(--vert);border:1px solid #ddd}
+/* Grid & cards */
+.section{padding:3rem 0}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 @media (max-width:800px){.grid{grid-template-columns:1fr 1fr}}
-@media (max-width:550px){.grid{grid-template-columns:1fr}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
 .card{background:#fff;border-radius:.6rem;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
 .card img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .card .content{padding:1rem}
 .card h3{margin:.2rem 0}
-
-.section{padding:3rem 0}
-.section h2{font-size:1.6rem;margin:0 0 1rem}
-.lead{font-size:1.1rem;color:#333}
-
-.footer{background:#143421;color:#ddd}
-.footer .container{padding:2rem 0;display:grid;gap:1rem;grid-template-columns:1fr 1fr}
-.footer a{color:#cde7d1}
-.footer small{display:block;margin-top:.6rem;color:#a6c2ab}
-@media (max-width:700px){.footer .container{grid-template-columns:1fr}}
-
-.contact-form{display:grid;gap:.8rem}
-.contact-form input, .contact-form textarea{padding:.7rem;border:1px solid #d6d6d6;border-radius:.4rem;background:#fff}
-.contact-form button{border:none}
-
-.badge{display:inline-block;background:#e9f6ec;color:#1f4b2e;border:1px solid #c9e9cf;padding:.3rem .5rem;border-radius:999px;font-size:.85rem}
-.kpi{display:flex;gap:1rem;flex-wrap:wrap}
+.lead{font-size:1.08rem;color:#333}
+.kpi{display:flex;gap:.8rem;flex-wrap:wrap}
 .kpi .item{background:#fff;padding:1rem;border-radius:.6rem;min-width:160px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.kpi .item h3{margin:0;font-size:1.4rem;color:var(--vert-fonce)}
-.kpi .item p{margin:.3rem 0 0;color:#444}
+.kpi .item h3{margin:0;color:var(--vert)}
+/* Footer */
+.footer{background:#143421;color:#cfe3d3}
+.footer .container{padding:2rem 0;display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+.footer a{color:#cfe3d3}
+@media (max-width:700px){.footer .container{grid-template-columns:1fr}}
+/* Menu responsive (simple) */
+#menuBtn{display:none}
+@media (max-width:720px){
+  #menuBtn{display:inline-block}
+  #menuList{display:none;flex-direction:column;gap:.3rem}
+  #menuList.open{display:flex}
+}
